@@ -1,0 +1,14 @@
+main {
+    background-color: var(--shape-body);
+}
+
+main header {
+
+    margin: 5rem 8.125rem 2.5rem;
+
+    h1 {
+    font: var(--heading-md);
+    color: var(--text-reading);
+    }
+}
+

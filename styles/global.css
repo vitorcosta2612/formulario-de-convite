@@ -6,8 +6,8 @@
 
 :root {
     --logo: 40px 'Leckerli One', cursive;
-    --heading-md: 28px bold 'Baloo 2';
-    --heading-sm: 18px bold 'Baloo 2';
+    --heading-md: bold 28px 'Baloo 2';
+    --heading-sm: bold 18px 'Baloo 2';
     --body-md: 16px 'open sans', sans-serif;
     --body-sm: 14px 'open sans', sans-serif;
     --body-xs: 12px 'open sans', sans-serif;
@@ -32,7 +32,7 @@
     --input-stroke: #363B40;
     --input-placeholder: #869198;
 
-    --shape-background:: #131516;
+    --shape-background: #131516;
     --shape-body: #212427;
     --shape-button: #2D3136;
     --shape-hover: #383D42;
