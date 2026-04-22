@@ -1,5 +1,6 @@
 main {
     background-color: var(--shape-body);
+    overflow-y: auto;
 }
 
 main header {
