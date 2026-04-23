@@ -1,0 +1,82 @@
+#about {
+
+    header {
+    display: flex;
+
+    gap: 0.75rem;
+    align-items: center;
+
+    font: var(--heading-sm);
+    color: var(--text-reading);
+
+    margin-bottom: 1.625rem;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-areas:
+        "A A"
+        "B C"
+        "D E"
+        "F F";
+        gap: 1rem;
+    }
+
+    .textinput:nth-child(1) {
+        grid-area: A;
+    }
+    .textinput:nth-child(2) {
+        grid-area: B;
+    }
+    .textinput:nth-child(3) {
+        grid-area: C;
+    }
+    .textinput:nth-child(4) {
+        grid-area: D;
+    }
+    .textinput:nth-child(5) {
+        grid-area: E;
+    }
+    .textinput:nth-child(6) {
+        grid-area: F;
+    }
+
+    .textinput {
+
+        display: flex;
+        flex-direction: column;
+
+        input {
+            width: 100%;
+
+            border: 1px solid var(--input-stroke);
+            background-color: var(--input-base);
+
+            height: 3rem;
+
+            border-radius: .5rem;
+
+            &::placeholder {
+                font: var(--body-md);
+                color: var(--input-placeholder);
+                padding-block: 0.8125rem;
+                padding-left: 1rem;
+            }
+
+        }
+
+        input[type="date"] {
+            font: var(--body-md);
+            color: var(--input-placeholder);
+            padding-block: 0.8125rem;
+            padding-left: 1rem;
+        }
+
+        >label {
+            font: var(--body-sm);
+            color: var(--text-body);
+
+            margin-bottom: 0.75rem;
+        }
+    }
+}

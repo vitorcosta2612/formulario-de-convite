@@ -1,9 +1,11 @@
 main {
     background-color: var(--shape-body);
     overflow-y: auto;
+
+
 }
 
-main header {
+main > header {
 
     margin: 5rem 8.125rem 2.5rem;
 
@@ -11,5 +13,10 @@ main header {
     font: var(--heading-md);
     color: var(--text-reading);
     }
+}
+
+form {
+    margin-inline: 8.125rem;
+    margin-bottom: 5rem;
 }
 
