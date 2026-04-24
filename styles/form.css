@@ -79,4 +79,53 @@
             margin-bottom: 0.75rem;
         }
     }
+
+    #tipo {
+        display: flex;
+        flex-direction: row;
+
+        width: 100%;
+
+        border: 1px solid var(--input-stroke);
+        background-color: var(--input-base);
+
+        height: 3rem;
+
+        border-radius: .5rem;
+    }
+
+    .type-option {
+        display: flex;
+        cursor: pointer;
+
+        align-items: center;
+
+        padding-inline: 1.9375rem;
+        gap: .5rem;
+
+        p {
+            font: var(--body-sm);
+            color: var(--input-placeholder);
+        }
+    }
+
+    .type-option:has(input:checked) {
+        background-color: var(--shape-button);
+        padding: auto;
+        margin: .25rem;
+        border-radius: .25rem;
+
+        p {
+                font: 600 14px 'open sans', sans-serif;
+                color: var(--text-reading);
+        }
+    }
+
+    #presencial {
+        display: none;
+    }
+
+    #online {
+        display: none;
+    }
 }
