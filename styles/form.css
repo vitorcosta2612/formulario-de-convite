@@ -156,6 +156,7 @@
 }
 
 #personalization {
+
     header {
     display: flex;
 
@@ -166,5 +167,85 @@
     color: var(--text-reading);
 
     margin-bottom: 1.625rem;
+    }
+
+
+
+    #colors{
+        margin-bottom: 1.75rem;
+
+        input {
+            display: none;
+        }
+
+        :nth-child(1) {
+            font: var(--body-sm);
+            color: var(--text-body);
+        }
+
+        #circles {
+            display: flex;
+            gap: .75rem;
+            margin-top: 1rem;
+
+            label {
+                cursor: pointer;
+            }
+
+            .color-option:has(input:checked) {
+
+                img {
+                    outline: 4px solid var(--brand-dark);
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+
+
+    #theme {
+
+        font: var(--body-sm);
+        color: var(--text-body);
+
+        input {
+            display: none;
+        }
+
+        #cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: .5rem;
+
+            margin-top: 1rem;
+            margin-bottom: 1.75rem;
+
+            label {
+                cursor: pointer;
+            }
+
+            .card {
+                background-color: var(--shape-button);
+                border: 1px solid var(--input-stroke);
+                border-radius: .5rem;
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    display: flex;
+                    justify-content: center;
+                    margin-block: .5rem;
+                    margin-inline: .25rem;
+                }
+            }
+
+            .card:has(input:checked) {
+                outline: 2px solid var(--brand-light);
+            }
+        }
+
     }
 }
