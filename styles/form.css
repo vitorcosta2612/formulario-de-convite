@@ -251,4 +251,87 @@
         }
 
     }
+
+
+
+    #style {
+        font: var(--body-sm);
+        color: var(--text-body);
+        width: 11rem;
+
+        #optestilo {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+        }
+
+        #buttonestilo {
+            display: flex;
+            flex-direction: row;
+            width: 4rem;
+            height: 2rem;
+
+            border: 1px solid var(--input-stroke);
+            background-color: var(--input-base);
+            border-radius: 999px;
+        }
+
+        #estilo {
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        .type-option2 {
+            display: flex;
+            flex: 1;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+
+            #escuro, #claro {
+                display: none;
+            }
+        }
+
+        p {
+            font: var(--body-sm);
+            color: var(--text-reading);
+        }
+
+        .type-option2:has(input:checked) {
+            background-image: url(../assets/Ellipse\ 1.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #buttonestilo:has(#claro:checked) {
+            background-color: var(--brand-light);
+            border: 1px solid var(--input-stroke);
+        }
+
+        .type-option2:has(#claro:checked) {
+            background-image: url(../assets/Ellipse\ 2.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #optestilo p {
+            font-size: 0; 
+        }
+
+        #optestilo p::after {
+            content: "Escuro";
+            font-size: 14px;
+        }
+
+        #optestilo:has(#claro:checked) p::after {
+            content: "Claro";
+        }
+    }
+
+
+
+    
 }
