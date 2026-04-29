@@ -254,10 +254,18 @@
 
 
 
+    #grid2 {
+        display: grid;
+        grid-template-columns: 32.35% 67.65%;
+        gap: 1rem;
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
     #style {
         font: var(--body-sm);
         color: var(--text-body);
-        width: 11rem;
+        width: 100%;
 
         #optestilo {
             display: flex;
@@ -328,6 +336,44 @@
 
         #optestilo:has(#claro:checked) p::after {
             content: "Claro";
+        }
+    }
+
+    #file {
+        font: var(--body-sm);
+        color: var(--text-body);
+        width: 100%;
+
+        > label {
+            display: block;
+            margin-bottom: .75rem;
+        }
+
+        input {
+            display: none;
+        }
+
+        label:nth-child(2) {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            cursor: pointer;
+            background-color: var(--shape-button);
+            width: fit-content;
+
+
+            img {
+                width: 1rem;
+                margin-block: .75rem;
+                margin-left: .75rem;
+            }
+
+            p {
+                font: 600 14px 'open sans', sans-serif;
+                color: var(--text-reading);
+                margin-block: .65rem;
+                margin-right: .75rem;
+            }
         }
     }
 
