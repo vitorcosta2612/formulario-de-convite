@@ -48,6 +48,7 @@
         flex-direction: column;
 
         input {
+            outline: none;
             width: 100%;
 
             border: 1px solid var(--input-stroke);
@@ -57,13 +58,23 @@
 
             border-radius: .5rem;
 
+            font: var(--body-md);
+            color: var(--text-reading);
+            padding-left: 1rem;
+            padding-block: 0.8125rem;
+
             &::placeholder {
                 font: var(--body-md);
                 color: var(--input-placeholder);
-                padding-block: 0.8125rem;
-                padding-left: 1rem;
             }
+        }
 
+        input:focus {
+            border-color: var(--brand-light);
+        }
+
+        input[type="text"]:invalid:not(:placeholder-shown) {
+            border-color: var(--danger);
         }
 
         input[type="date"] {
@@ -93,13 +104,24 @@
 
             margin-bottom: 3rem;
 
+            outline: none;
+
+            font: var(--body-md);
+            color: var(--text-reading);
+            padding-left: 1rem;
+            padding-block: 0.8125rem;
+
+
             &::placeholder {
                 font: var(--body-md);
                 color: var(--input-placeholder);
-                padding-block: 0.8125rem;
-                padding-left: 1rem;
             }
         }
+
+        textarea:focus {
+            border-color: var(--brand-light);
+        }
+
     }
 
     #tipo {
@@ -198,7 +220,14 @@
             .color-option:has(input:checked) {
 
                 img {
-                    outline: 4px solid var(--brand-dark);
+                    outline: 2px solid var(--brand-light);
+                    border-radius: 50%;
+                }
+            }
+
+            .color-option:hover {
+                img {
+                    outline: 1px solid var(--shape-hover);
                     border-radius: 50%;
                 }
             }
@@ -243,6 +272,10 @@
                     margin-block: .5rem;
                     margin-inline: .25rem;
                 }
+            }
+
+            .card:hover {
+                background-color: var(--shape-hover);
             }
 
             .card:has(input:checked) {
@@ -418,13 +451,26 @@
 
                 border-radius: .5rem;
 
+                outline: none;
+
+                font: var(--body-md);
+                color: var(--text-reading);
+                padding-left: 1rem;
+                padding-block: 0.8125rem;
+
                 &::placeholder {
                     font: var(--body-md);
                     color: var(--input-placeholder);
-                    padding-block: 0.8125rem;
-                    padding-left: 1rem;
                 }
 
+            }
+
+            input:focus {
+            border-color: var(--brand-light);
+            }
+
+            input[type="text"]:invalid:not(:placeholder-shown) {
+            border-color: var(--danger);
             }
 
             >label {
@@ -434,20 +480,16 @@
                 margin-bottom: 0.75rem;
             }
 
-            textarea {
-                border: 1px solid var(--input-stroke);
-                background-color: var(--input-base);
-                border-radius: .5rem;
-                height: 8.5rem;
+            input[type="email"]:invalid:not(:placeholder-shown) {
+            border-color: var(--danger);
 
-                margin-bottom: 3rem;
+            background-image: url(../assets/circle-alert.png);
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            }
 
-                &::placeholder {
-                    font: var(--body-md);
-                    color: var(--input-placeholder);
-                    padding-block: 0.8125rem;
-                    padding-left: 1rem;
-                }
+            input[type="tel"]:invalid:not(:placeholder-shown) {
+            border-color: var(--danger);
             }
         }
 }
@@ -522,4 +564,16 @@ footer {
             margin-right: .75rem;
         }
     }
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px var(--input-base) inset;
+    -webkit-text-fill-color: var(--text-reading);
+    border: 1px solid var(--input-stroke);
+    border-radius: .5rem;
+    
+    transition: background-color 9999s ease-in-out 0s;
 }
